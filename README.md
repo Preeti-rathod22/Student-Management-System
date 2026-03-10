@@ -1,16 +1,90 @@
-# React + Vite
+# 🎓 Student Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React.js frontend application that performs full CRUD (Create, Read, Update, Delete) operations entirely on the client side using in-memory state and localStorage.
 
-Currently, two official plugins are available:
+This project was developed as part of a frontend assignment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://your-live-link.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features
+
+- Add new students with validation
+- Edit existing student details with pre-filled form
+- Delete students with confirmation dialog
+- Email format validation
+- Unique email validation
+- Age validation (1–120 range)
+- Simulated loading state with spinner
+- Persistent data using localStorage
+- Export student data to Excel (.xlsx)
+- Clean and responsive user interface
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js (Functional Components & Hooks)
+- useState & useEffect
+- XLSX library for Excel export
+- CSS3 for styling
+- localStorage for client-side persistence
+
+---
+
+## 🧠 Validation Rules
+
+- All fields are mandatory
+- Name must contain only alphabets
+- Email must be in valid format
+- Email must be unique
+- Age must be between 1 and 120
+
+---
+
+## 📂 Project Structure
+│
+├── App.js
+├── App.css
+├── data/
+│ └── students.js
+└── main.jsx
+
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository
+git clone https://github.com/your-username/student-management-system.git
+
+2. Navigate into the project directory
+cd student-management-system
+
+3. Install dependencies
+npm install
+
+4. Run the development server
+npm run dev
+
+---
+
+## 💡 Design Decisions
+
+- All CRUD operations are handled on the frontend as per assignment requirements.
+- Data persistence is achieved using localStorage.
+- Email uniqueness validation is implemented to simulate real-world data constraints.
+- A simulated loading state enhances user experience.
+- Excel export functionality allows downloading student records.
+
+---
+
+## 👩‍💻 Author
+
+Preeti Rathod  
+Frontend Developer

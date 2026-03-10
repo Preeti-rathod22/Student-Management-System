@@ -24,7 +24,7 @@ const [formData, setFormData] = useState({
 useEffect(() => {
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 1000);
 }, []);
 
 // Persist students data in localStorage whenever it changes
@@ -34,12 +34,12 @@ useEffect(() => {
 
 // Update form fields when user types
   const handleChange = (e) => {
-  const { name, value } = e.target;
+ const { name, value } = e.target;
 
-  setFormData({
-    ...formData,
-    [name]: value
-  });
+setFormData({
+  ...formData,
+  [name]: name === "age" ? value : value
+});
 };
 
 // Validate form inputs before adding or updating student
@@ -121,13 +121,15 @@ const handleEdit = (student) => {
   setFormData({
     name: student.name,
     email: student.email,
-    age: student.age
+    age: String(student.age)   // 👈 force string
   });
 
   setEditId(student.id);
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+
 
 if (loading) {
   return (
@@ -156,12 +158,6 @@ const workbook = XLSX.utils.book_new();
   XLSX.writeFile(workbook, "students.xlsx");
 };
 
-const isFormValid =
-  formData.name.trim() !== "" &&
-  formData.email.trim() !== "" &&
-  formData.age.trim() !== "" &&
-  formData.age > 0 &&
-  formData.age <= 120;
 
  return (
   <div className="container">
@@ -196,7 +192,7 @@ const isFormValid =
         onChange={handleChange}
       />
 
-     <button type="submit" disabled={!isFormValid}>
+     <button type="submit" >
       {editId !== null ? "Update Student" : "Add Student"}
       </button>
 
