@@ -8,7 +8,7 @@ This project was developed as part of a frontend assignment.
 
 ## 🚀 Live Demo
 
-🔗 https://your-live-link.vercel.app
+https://student-management-system-rho-woad.vercel.app
 
 ---
 

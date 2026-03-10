@@ -1,13 +1,13 @@
 const studentsData = [
   {
     id: 1,
-    name: "John Doe",
-    email: "john@gmail.com",
+    name: "Uday Kumar",
+    email: "uday@gmail.com",
     age: 20
   },
   {
     id: 2,
-    name: "Sara Khan",
+    name: "Sara Patil",
     email: "sara@gmail.com",
     age: 22
   },
